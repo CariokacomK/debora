@@ -46,8 +46,38 @@ body {
   width: 250px;
   height: 250px;
   object-fit: cover;
+  clip-path: polygon(
+    50% 0%,
+    61% 8%,
+    70% 18%,
+    78% 30%,
+    84% 42%,
+    88% 55%,
+    90% 68%,
+    89% 78%,
+    87% 85%,
+    83% 90%,
+    78% 94%,
+    72% 96%,
+    65% 98%,
+    58% 99%,
+    50% 100%,
+    42% 99%,
+    35% 98%,
+    28% 96%,
+    22% 94%,
+    17% 90%,
+    13% 85%,
+    11% 78%,
+    10% 68%,
+    12% 55%,
+    16% 42%,
+    22% 30%,
+    30% 18%,
+    39% 8%,
+    50% 0%
+  );
   animation: pulse 2s infinite;
-  clip-path: path("M128 224s96-48 96-128c0-48-32-80-72-80-24 0-40 16-48 32-8-16-24-32-48-32-40 0-72 32-72 80 0 80 96 128 96 128z");
 }
 
 .popup {
@@ -103,4 +133,19 @@ body {
     left: 100vw;
     opacity: 0;
   }
+}
+
+.foto-coracao {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  clip-path: url(#heartClip);
+  -webkit-clip-path: url(#heartClip);
+  animation: pulse 2s infinite;
+}
+
+svg {
+  position: absolute;
+  width: 0;
+  height: 0;
 }
