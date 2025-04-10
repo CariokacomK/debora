@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Surpresa 💌</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div id="container">
+    <div id="poema" class="poema"></div>
+    <div id="perguntas" class="hidden">
+      <div class="pergunta" id="pergunta1">
+        <p>Que dia comemoramos nosso aniversário de namoro?</p>
+        <button class="btn" onclick="responder(1, '5', this)">5</button>
+        <button class="btn" onclick="responder(1, '6', this)">6</button>
+        <button class="btn" onclick="responder(1, '7', this)">7</button>
+      </div>
+      <div class="pergunta hidden" id="pergunta2">
+        <p>Quantos anos de namoro vamos estar fazendo?</p>
+        <button class="btn" onclick="responder(2, '1',this)">1</button>
+        <button class="btn" onclick="responder(2, '2',this)">2</button>
+        <button class="btn" onclick="responder(2, '3',this)">3</button>
+      </div>
+      <div class="pergunta hidden" id="pergunta3">
+        <p>Você gostaria de passar a vida inteira comigo?</p>
+        <button class="btn" onclick="mostrarAmor()">Sim 💖</button>
+        <button class="btn" id="naoBtn" onclick="fugir()">Não 😢</button>
+      </div>
+    </div>
+    <div id="popup-erro" class="popup hidden">🤡</div>
+    <div id="final" class="hidden">
+      <img src="foto.jpg" class="foto-coracao" />
+      <div id="coracoes"></div>
+    </div>
+  </div>
+
+  <svg width="0" height="0" style="position: absolute;">
+    <defs>
+      <clipPath id="clip-coracao" clipPathUnits="objectBoundingBox">
+        <path d="M0.5,0.35
+                 C0.35,0, 0,0.2, 0.25,0.6
+                 C0.5,1, 0.75,0.6, 1,0.2
+                 C0.65,0, 0.5,0.35, 0.5,0.35Z" />
+      </clipPath>
+    </defs>
+  </svg>
+
+  <script src="script.js"></script>
+</body>
+</html>
