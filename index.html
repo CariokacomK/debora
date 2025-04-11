@@ -33,6 +33,18 @@
         <button class="btn" onclick="responder(2, '3',this)">3</button>
       </div>
       <div class="pergunta hidden" id="pergunta3">
+        <p>Qual é a minha cor favorita</p>
+        <button class="btn" onclick="responder(3, 'verde',this)">Verde 🟢</button>
+        <button class="btn" onclick="responder(3, 'roxo',this)">Roxo 🟣</button>
+        <button class="btn" onclick="responder(3, 'azul',this)">Azul 🔵</button>
+      </div>
+      <div class="pergunta hidden" id="pergunta4">
+        <p>Qual é a meu esporte preferido</p>
+        <button class="btn" onclick="responder(4, 'futebol',this)">futebol ⚽</button>
+        <button class="btn" onclick="responder(4, 'basquete',this)">basquete ⛹️‍♂️</button>
+        <button class="btn" onclick="responder(4, 'volei',this)">vôlei 🥅</button>
+      </div>
+      <div class="pergunta hidden" id="pergunta5">
         <p>Você gostaria de passar a vida inteira comigo?</p>
         <button class="btn" onclick="mostrarAmor()">Sim 💖</button>
         <button class="btn" id="naoBtn" onclick="fugir()">Não 😢</button>
@@ -41,6 +53,13 @@
     <div id="popup-erro" class="popup hidden">🤡</div>
     <div id="final" class="hidden">
       <img src="foto.jpg" class="foto-coracao" />
+      <div class="texto-lettering">
+        Meu amor,<br><br>
+        Não sei dizer em palavras o quanto te amo, por isso pensei em usar do que sei (tecnologia) para expressar um pouco do que sinto por você.<br><br>
+        Você é a pessoa mais forte e guerreira que conheço.<br>
+        Espero que esta simples página possa fazer seu dia 1% mais feliz, pois em minha vida, nada poderia ser melhor do que ter você ao meu lado com seu sorriso.<br><br>
+        Te amo um tantão!
+      </div>
       <div id="coracoes"></div>
     </div>
   </div>

@@ -30,7 +30,7 @@ const perguntas = document.querySelectorAll(".pergunta");
 let naoClicks = 0;
 
 function typePoema() {
-  if (currentIndex > poema.length) {
+  if (currentIndex < poema.length) {
     poemaEl.textContent += poema.charAt(currentIndex);
     currentIndex++;
     setTimeout(typePoema, 50);
@@ -43,7 +43,7 @@ function typePoema() {
   }
 }
 
-const respostasCorretas = ['6', '3']; 
+const respostasCorretas = ['6', '3', 'verde', 'basquete']; 
 
 function responder(perguntaIndex, resposta, el) {
   if (resposta !== respostasCorretas[perguntaIndex - 1]) {
@@ -71,19 +71,21 @@ function mostrarAmor() {
 
   const container = document.getElementById("coracoes");
 
-  const linhas = [10, 30, 50, 70, 90];
   for (let i = 0; i < 30; i++) {
     const cora = document.createElement("div");
     cora.className = "cora";
-    
-    const linha = linhas[Math.floor(Math.random() * linhas.length)];
-    cora.style.top = `${linha}vh`; 
-    cora.style.left = "0";
-    cora.style.animation = `andar ${2 + Math.random()}s linear forwards`;
-    cora.textContent = "💜";
-    
+    cora.innerHTML = "&#10084;"; 
+
+    const left = Math.floor(Math.random() * 100);
+    cora.style.left = `${left}vw`;
+
+    cora.style.color = `hsl(${Math.random() * 360}, 100%, 70%)`;
+
+    const duration = (3.5 + Math.random()).toFixed(1);
+    cora.style.animation = `subir ${duration}s ease-out forwards`;
+
     container.appendChild(cora);
-    setTimeout(() => cora.remove(), 3000);
+    setTimeout(() => cora.remove(), duration * 1000);
   }
 }
 
